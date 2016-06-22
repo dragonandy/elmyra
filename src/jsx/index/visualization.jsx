@@ -52,10 +52,11 @@ var Visualization = React.createClass({
 
     var previewImage;
     var previewClasses = ['preview'];
-    if(currentVersion.lastRender === undefined) {
-      previewClasses.push('pending');
-      previewImage = 'Rendering soon';
-    } else {
+    if(true) {
+    // if(currentVersion.lastRender === undefined) {
+    //   previewClasses.push('pending');
+    //   previewImage = 'Rendering soon';
+    // } else {
       var invalidate_cache = '?' + moment(currentVersion.lastRender).unix();
 
       previewImage = <img src={'/vis/' + currentVersion.title + '/' + this.state.currentVersionID + '/thumbnail' + invalidate_cache}
